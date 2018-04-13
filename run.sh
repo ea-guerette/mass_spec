@@ -2,14 +2,22 @@
 #PBS -P m19
 #PBS -q normal
 #PBS -N mass_spec
-#PBS -l wd 
-#PBS -l walltime=16:00:00,mem=20GB
+#PBS -l walltime=03:00:00
+#PBS -l mem=20000MB
+#PBS -l cput=03:00:00
+#PBS -l wd
+#PBS -l ncpus=1
 #PBS -j oe
 
-# run in working directory, 
-# run on normal queue
-# for up to 20 hrs using up to 20GB ram
-# output and error streams combined
+# -P group m19 (us) running process
+# -q run on normal queue
+# -N Process named mass_spec
+# walltime take up to 16 hrs
+# mem using up to 20GB ram
+# cput use up to 16 hrs cpu processing time
+# wd run in working directory, 
+# ncpus use just 1 cpu
+# oe output and error streams combined
 
 # could add this and #PBS -l ncpus=4
 #setenv OMP_NUM_THREADS $PBS_NCPUS
