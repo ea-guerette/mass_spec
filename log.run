@@ -1,0 +1,64 @@
+Loading required package: MSeasy
+Loading required package: amap
+Loading required package: clValid
+Loading required package: cluster
+Loading required package: fpc
+Loading required package: mzR
+Loading required package: Rcpp
+Loading required package: methods
+Loading required package: xcms
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:parallel':
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, xtabs
+
+The following objects are masked from 'package:base':
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, cbind, colnames, do.call, duplicated, eval, evalq,
+    get, grep, grepl, intersect, is.unsorted, lapply, lengths, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int, rank,
+    rbind, rownames, sapply, setdiff, sort, table, tapply, union,
+    unique, unsplit, which, which.max, which.min
+
+Loading required package: ProtGenerics
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+ *** caught segfault ***
+address 0x7fd10dddd000, cause 'invalid permissions'
+
+Traceback:
+ 1: .C("R_distance", x = as.double(x), nr = N, nc = ncol(x), d = double(N *     (N - 1)/2), diag = as.integer(FALSE), method = as.integer(method),     nbproc = as.integer(nbproc), ierr = as.integer(0), NAOK = TRUE,     PACKAGE = "amap")
+ 2: amap::Dist(data_tot[, Beg:ncol(data_tot)], method = disMeth,     diag = FALSE, upper = FALSE)
+ 3: MS.clust(mydata, quant = TRUE, clV = TRUE, ncmin = 10, ncmax = 2000,     varRT = 60, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
+An irrecoverable exception occurred. R is aborting now ...
+/jobfs/local/pbs/mom_priv/jobs/6038359.r-man2.SC: line 52:  8003 Segmentation fault      Rscript instructions.R
+
+======================================================================================
+                  Resource Usage on 2018-04-14 00:54:35:
+   Job Id:             6038359.r-man2
+   Project:            m19
+   Exit Status:        139 (Linux Signal 11 SIGSEGV Segmentation violation)
+   Service Units:      1.24
+   NCPUs Requested:    1                      NCPUs Used: 1               
+                                           CPU Time Used: 01:14:08                                   
+   Memory Requested:   19.53GB               Memory Used: 15.24GB         
+   Walltime requested: 03:00:00            Walltime Used: 01:14:18        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================
