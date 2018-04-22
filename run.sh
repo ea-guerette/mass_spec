@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -P m19
+#PBS -P ui08
 #PBS -q normal
 #PBS -N mass_spec
 #PBS -l walltime=03:00:00
@@ -9,7 +9,7 @@
 #PBS -l ncpus=1
 #PBS -j oe
 
-# -P group m19 (us) running process
+# -P group ui08 (elise) running process
 # -q run on normal queue
 # -N Process named mass_spec
 # walltime take up to 16 hrs
@@ -57,10 +57,10 @@ Rscript instructions.R
 ##we will have to set up the directory - not sure how it works on NCI - the command is setwd("C:/")
 #
 ##to load in data matrix: 
-#load("initial_DATA.RData")
+#load("cataract_201803.RData")
 ##you can now run Step 2
 #
-#MS.clust(mydata[1:100,], quant = TRUE, clV = TRUE, ncmin = 2, ncmax = 5, varRT = 60, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
+#MS.clust(mydata, quant = TRUE, clV = TRUE, ncmin = 10, ncmax = 5000, varRT = 60, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
 #1
 #
 #END
