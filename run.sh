@@ -2,9 +2,9 @@
 #PBS -P ui08
 #PBS -q normal
 #PBS -N mass_spec
-#PBS -l walltime=5:00:00
+#PBS -l walltime=3:00:00
 #PBS -l mem=20000MB
-#PBS -l cput=5:00:00
+#PBS -l cput=3:00:00
 #PBS -l wd
 #PBS -l ncpus=1
 #PBS -j oe

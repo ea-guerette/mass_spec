@@ -3,7 +3,7 @@ require(MSeasy)
 #we will have to set up the directory - not sure how it works on NCI - the command is setwd("C:/")
 
 #to load in data matrix: 
-load("data/all.RData")
+load("data/jan.RData")
 #you can now run Step 2
 
 mydata <- subset(mydata, retention_time >6 & retention_time <40)
