@@ -6,6 +6,8 @@ require(MSeasy)
 load("data/all.RData")
 #you can now run Step 2
 
-#MS.clust(mydata, quant = TRUE, clV = TRUE, ncmin = 10, ncmax = length(mydata$analysis)-1, varRT = 60, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
+mydata <- subset(mydata, retention_time >6 & retention_time <40)
 
-MS.clust(mydata, quant = TRUE, clV = F, Nbc = 168, varRT = 60, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
+MS.clust(mydata, quant = TRUE, clV = TRUE, ncmin = 10, ncmax = length(mydata$analysis)-1, varRT = 60, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
+
+#MS.clust(mydata, quant = TRUE, clV = F, Nbc = 168, varRT = 60, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
