@@ -8,6 +8,6 @@ load("data/all.RData")
 
 mydata <- subset(mydata, retention_time >6 & retention_time <26)
 
-MS.clust(mydata, quant = TRUE, clV = TRUE, ncmin = 10, ncmax = length(mydata$analysis)-1, varRT = 2, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
+#MS.clust(mydata, quant = TRUE, clV = TRUE, ncmin = 10, ncmax = length(mydata$analysis)-1, varRT = 2, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
 
-#MS.clust(mydata, quant = TRUE, clV = F, Nbc = 168, varRT = 2, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
+MS.clust(mydata, quant = TRUE, clV = F, Nbc = 89, varRT = 2, disMeth = "euclidian", linkMeth = "ward", clustMeth = "hierarchical")
