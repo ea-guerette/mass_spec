@@ -2839,14 +2839,14 @@ Calls: MS.clust -> readLines
 Execution halted
 
 ======================================================================================
-                  Resource Usage on 2018-07-26 14:57:23:
-   Job Id:             8741938.r-man2
+                  Resource Usage on 2018-07-26 15:37:58:
+   Job Id:             8742512.r-man2
    Project:            ui08
    Exit Status:        1
-   Service Units:      0.24
+   Service Units:      0.29
    NCPUs Requested:    1                      NCPUs Used: 1               
-                                           CPU Time Used: 00:14:28                                   
-   Memory Requested:   19.53GB               Memory Used: 352.98MB        
-   Walltime requested: 02:00:00            Walltime Used: 00:14:36        
+                                           CPU Time Used: 00:17:00                                   
+   Memory Requested:   19.53GB               Memory Used: 343.21MB        
+   Walltime requested: 01:00:00            Walltime Used: 00:17:10        
    JobFS requested:    100.0MB                JobFS used: 0B              
 ======================================================================================
